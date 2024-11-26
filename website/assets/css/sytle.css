@@ -1,0 +1,49 @@
+div{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box ;
+}
+.navbar-brand svg
+{
+    width: 40px;
+    height: 40px;
+}
+.navbar
+{
+    background-color: transparent !important;
+}
+.nav-row a
+{
+    color: white !important;
+}
+.links-div{
+    height: 65vh;
+    overflow: auto;
+    
+}
+.list-group li
+{
+    opacity:0.7;
+    border: 0;
+}
+.accordian{
+    border: 0;
+}
+.contact-form
+{
+    font-size: 70% !important;
+}
+.contact-form input,textarea,button
+{
+    
+    font-size: 70% !important;
+}
+@media screen and (max-width: 576px){
+    .download-btn-div{
+        display: flex;
+        justify-content: center;
+    }
+    .contact-form{
+        width: 75vw !important;
+    }
+}

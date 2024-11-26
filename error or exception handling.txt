@@ -1,0 +1,39 @@
+error or exception handling:
+
+	In my sql store procedure or function to manage and respond to error or unexpected situation. 
+my sql provide certain handler to define how to respond when an error or warning occurs.
+
+TYPE OF HANDLER ACTIONS:
+	1] Continue handler : 
+		It is responsible to execute the procedure continue with the next statement after the handler finishes 
+
+	2] Exit handler :
+		It is responsible to terminate the procedure when the handler is executed.
+	
+	3] Undo handler:
+		Not Supported by MySQL.
+
+Declaration of Exception inside Procedure or Function
+
+	Declare Handler_Name handler
+
+		for
+
+		Condition Value
+
+		Begin
+
+		//Action taken
+
+		End
+
+Types of Condition value
+
+1]sql exception: 
+it is responsible to handle all type of error
+2]sql warning:
+ it is responsible to handle all type of sql warning.
+3] not found
+4] Specific error code.
+
+Note : You should use transaction management 

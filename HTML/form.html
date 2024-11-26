@@ -1,0 +1,68 @@
+<!-- 
+1) textfield
+2)  buttons
+3) labels
+4) checkbox
+5) radio buttons 
+6) dropdown
+7)
+-->
+
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <br>
+    <label for="age">Age:</label>
+    <input type="number" pattern="[0-9]{1,3}" value="25" min="1" max="150" name="age">
+    <br>
+    <label>Email-id:</lablel>
+    <input type="email" required id="email" name="email">
+    <br>
+    <label>Password:</label>
+    <input type="password" required id="password" name="password">
+    <br>
+    <label>City</label>
+    <select name="city" id="city" required>
+        <option value="">Select City</option>
+        <option value="ngp">Nagpur</option>
+        <option value="ch">Chandrapur</option>
+        <option value="Gd">Gadchiroli</option>
+        <option value="bpl">Bhopal</option>
+        <option value="ind">Indore</option>
+    </select><br>
+
+    <label for="city">City:</label>
+    <select name="city" id="city" required multiple>
+        <option value="ngp">Nagpur</option>
+        <option value="ch">Chandrapur</option>
+        <option value="Gd">Gadchiroli</option>
+        <option value="bpl">Bhopal</option>
+        <option value="ind">Indore</option>
+    </select><br>
+    <label for="address">Address:</label>
+    <textarea requires id="address" name="address" rows="3" cols="60" >
+    </textarea>
+    <br>
+    <label for="gender">Gender:</label>
+    <label for="male">Male</label>
+    <input type="radio" value="male" name="gender" checked>
+    <label for="female">Female</label> 
+    <input type="radio" value="female" name="gender">
+    <label for="other">Other</label> 
+    <input type="radio" value="other" name="gender">
+    <br>
+    <label for="hobby">Hobbies</label>
+    <label for="hobby">Select Hobby:</label>
+    <label for="painting">Painting</label>
+    <input type="checkbox" value="painting" name="hobby">
+    <label for="running">Running</label>
+    <input type="checkbox" value="running" name="hobby">
+    <label for="reading">Reading</label>
+    <input type="checkbox" value="reading" name="hobby">
+    <label for="Swimming">Swimming</label>
+    <input type="checkbox" value="Swimming" name="hobby">
+    <br>
+    <label for="color">Fav Color:</label>
+    <
+
+</form>

@@ -1,0 +1,49 @@
+    1  ls
+    2  cd ..
+    3  ls
+    4  nano index.html
+    5  cd
+    6  nano index.html
+    7  ls
+    8  mkdir website
+    9  ls
+   10  mv index.html website/index.html
+   11  ls
+   12  cd website
+   13  ls
+   14  cd
+   15  cd ..
+   16  cd ubuntu/
+   17  ls
+   18  sudo apt update -y
+   19  sudo apt install docker.io -y
+   20  sudo service start
+   21  sudo service docker start
+   22  sudo usesmod -aG docker $USER
+   23  sudo usermod -aG docker $USER
+   24  sudo systemctl status  docker
+   25  sudo docker pull nginx
+   26  sudo docker run --name my-nginx -d -p 80:80:
+   27  sudo docker run --name my-nginx -d -p 80:80 ngnix
+   28  sudo docker ps
+   29  sudo docker run --name my-nginx -d -p 80:80 nginx
+   30  sudo docker exec -it my-nginx /bin/bash
+   31  history
+   32  nano index.html
+   33  cd mywebsite/
+   34  nano index.html
+   35  cd mywebsite/
+   36  nano index.html
+   37  sudo docker cp index.html my-nginx:/usr/share/nginx/html/index.html
+   38  nano index.html
+   39  sudo docker cp index.html my-nginx:/usr/share/nginx/html/index.html
+   40  sudo docker ps
+   41  sudo docker stop 6ed4177cc0b8 
+   42  sudo docker ps
+   43  sudo docker ps -a
+   44  sude docker rm 6ed4177cc0b8
+   45  sudo docker rm 6ed4177cc0b8
+   46  sudo docker run --name my-nginx -d -p 80:80 nginx
+   47  sudo docker exec -it my-nginx /bin/bash
+   48  sudo docker cp index.html my-nginx:/usr/share/nginx/html/index.html
+   49  history

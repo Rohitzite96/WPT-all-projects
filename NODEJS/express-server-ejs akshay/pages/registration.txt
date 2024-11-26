@@ -1,0 +1,5 @@
+name 
+email-id
+password
+confirm password
+mobile number

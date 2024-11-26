@@ -1,0 +1,20 @@
+<script>
+    //Spread Operator ...
+    const arr=[2,45,43,23,12,76,45]
+    const arr1=[44,22,...arr]
+    // arr.Each(function (e){
+    //     arr1.push(e)
+    // })
+    // console.log(arr1)
+    const contact={mobile:"293847829",city:"Nagpur"}
+    const person={name:"Esha",age:23,...contact}
+
+    for(key of Object.keys(contact)){
+        person[key]=contact[key]
+    }
+
+
+    console.log(person)
+
+
+</script>

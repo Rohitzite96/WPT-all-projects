@@ -1,0 +1,3 @@
+name :Shahrukh,
+city: mumbai,
+age: 54;

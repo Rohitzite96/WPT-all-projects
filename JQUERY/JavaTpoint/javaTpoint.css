@@ -1,0 +1,22 @@
+.nav-item :hover{
+    background-color:#092628;
+    color: white;
+}
+.btn1{
+    border: none;
+    background-color:  #e7f6f8;
+    padding: 10px;
+    
+}
+.btn1:hover{
+    background-color:  #b6e8ef;
+
+}
+.accordion-body{
+       
+    background-color:  #e7f6f8;
+}
+a:link {
+    color: white;
+   
+}

@@ -1,0 +1,70 @@
+
+.container{
+    background-image: url("../img/strechBackground.jpg");
+    height: 100vh;   
+}
+
+.navbar{
+    background-color: black;
+    opacity: 0.5;
+}
+ 
+a{
+    color: #ff640a !important;
+    
+}
+.navbar-brand:hover{
+    color: white !important;
+}
+.btn{
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    height: 35px;
+    width: 110px;
+}
+.btn:hover{
+    background-color: rgb(25, 24, 24);
+    color: white;
+}
+.btn-div{
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.navbar-brand {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.upgradebtn{
+    border: none;
+    background-color: #fab818;
+    height: 40px;
+    width: 300px;
+}
+.upgradediv{
+ 
+padding: 10px; 
+color: white;
+height: 300px;
+margin-top: 90px;
+margin-left: 50px;
+width:500px;
+}
+
+.h2::selection{
+    color: #ff640a;
+    background-color: rgb(53, 51, 51);
+}
+.upgradelabel{
+    font-size: x-small;
+}
+.upgradelabel::selection{
+    color: #ff640a;
+    background-color: rgb(53, 51, 51);
+}

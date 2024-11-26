@@ -1,0 +1,33 @@
+<script>
+    function function1() {
+    const p=new Promise((resolve,reject)=>{
+       setTimeout(resolve("Success result..."),3000)
+    })
+    
+    p.then((result)=>{
+        console.log("then1")
+        console.log(result)
+        return result
+    }).then((result)=>{
+        function2(result)
+        console.log("then2")
+
+    }).catch((err)=>{
+        console.error(p)
+        console.error(err)
+
+    }).finally()
+        {
+        console.warn("Finish Executiom")
+        console.warn("Clean-up code...")
+    }
+}
+
+    function function2(r)
+    {
+        console.log("function2",r)
+    }
+    function1()
+    function2()
+
+</script>

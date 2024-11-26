@@ -1,0 +1,69 @@
+<script>
+  function validatePaymentInfo(paymentInfo) {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+              if (paymentInfo.cardNumber && paymentInfo.cvv && paymentInfo.expiryDate) {
+                  console.log("Payment information validated.");
+                  resolve("Validation Successful");
+              } else {
+                  reject("Validation Failed: Invalid payment information.");
+              }
+          }, 1000);
+      });
+  }
+
+  function processPayment(paymentInfo) {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+              const paymentSuccess = Math.random() > 0.2;
+              if (paymentSuccess) {
+                  console.log("Payment processed successfully.");
+                  resolve("Payment Successful");
+              } else {
+                  reject("Payment Failed: Insufficient funds or network error.");
+              }
+          }, 2000);
+      });
+  }
+
+  function updateOrderStatus(orderId) {
+      return new Promise((resolve) => {
+          setTimeout(() => {
+              console.log("Order status updated to 'Completed'.");
+              resolve("Order Updated");
+          }, 1000);
+      });
+  }
+
+  function initiateTransaction(paymentInfo, orderId) {
+      validatePaymentInfo(paymentInfo)
+          .then((validationResult) => {
+              console.log(validationResult);
+              return processPayment(paymentInfo);
+          })
+          .then((paymentResult) => {
+              console.log(paymentResult);
+              return updateOrderStatus(orderId);
+          })
+          .then((updateResult) => {
+              console.log(updateResult);
+              console.log("Transaction completed successfully!");
+          })
+          .catch((error) => {
+              console.error("Transaction failed:", error);
+          });
+  }
+
+
+  const paymentInfo = {
+      cardNumber: "1234-5678-9012-3456",
+      cvv: "123",
+      expiryDate: "12/25"
+  };
+
+  const orderId = "ORDER1234";
+
+
+  initiateTransaction(paymentInfo, orderId);
+
+</script>

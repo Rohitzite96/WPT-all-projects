@@ -1,0 +1,9 @@
+.bg-color{
+    background-color: navy;
+}
+.text-color{
+    color: aqua;
+}
+input,button,label,option,select{
+    font-size: 90% !important;
+  }

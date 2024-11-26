@@ -1,0 +1,97 @@
+
+
+
+<!-- 
+<div id="box"></div> -->
+    <div id="clock" class="clock"></div>
+    <button onclick="startClock()">Start</button>
+    <button onclick="stopClock()">Stop</button>
+<style>
+    #box{
+        height: 100px;
+        background-color: red;
+        display: none;
+        position: absolute;
+        left:0px;
+        top:0px;
+        transition:all 2s;
+    }
+    .clock{
+        margin-top: 20px;
+    }
+
+</style>
+<script>
+//     const box=document.getElementById("box")
+// setTimeout(function(){
+//     box.style.display="block"
+
+// },2000)
+// setTimeout(function(){
+//     box.style.backgroundColor= "orange"
+//     box.style.width="100%"
+//     box.style.left="100px"
+//     box.style.top="100px"
+
+// },4000)
+// console.log(d)
+
+// console.log(d.getDate())
+// console.log(d.getDay())
+// console.log(d.getMonth())
+// console.log(d.getFullYear())
+
+// console.log(d.getHours())
+// console.log(d.getMinutes())
+// console.log(d.getSeconds())
+let intervalId=null
+let d=new Date()
+let clockDiv=null
+function startClock(){
+let clockDiv = document.getElementById("clock")
+intervalId=setInterval(function(){
+    d=new Date()
+    clockDiv.innerHTML=`${d.getHours()}:
+    ${d.getMinutes()}:
+    ${d.getSeconds()}`
+},1000)
+
+}
+function stopClock(){
+    clearInterval(intervalId)
+}
+const dd=new Date(2020,10,12,3,40,17)
+//Date(y,m,d,hr,min,sec,ms)
+// console.log(dob)
+
+const dateStr=`${getdayStr(dd.getDay()).toUpperCase().substr(0,3)} ${dd.getDate()}/${dd.getMonth()}/${dd.getFullYear()}`
+console.log(dateStr)
+
+ function getdayStr(day){
+    switch(day){
+    case 0: 
+    return "sunday"
+    case 1:
+        return "monday"
+    case 2:
+        return "tuesday"
+    case 3:
+        return "wednesday"
+    case 4:
+        return "thursday"
+    case 5:
+        return "friday"
+    case 6:
+        return "saturday"
+    }
+ }
+ const oneSecond=1000
+ const oneminute=oneSecond*60
+ const oneHour=oneminute*60
+ const oneday=oneHour*24
+ const oneYear=oneday*365
+
+ const dob=new Date(2001,9,20,12,33,3)
+ const diffTime=d.getTime()-dob.getTime()
+ console.log((diffTime/oneYear).toFixed(0), "year")
+</script>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Dom Manipulation
+
+        DOM(document) methods
+
+        createElement() // create tag object 
+
+        createTextNode() //create text content for tag object 
+    --APPEND METHODS-- 
+        appendChild()
+        append()
+    </pre> 
+
+    <div id="para-box">
+
+
+    </div>
+    <div id="img" style="width:50px;"></div>
+    <script>
+      const div = document.getElementById("para-box")
+        const pTag = document.createElement("p"); //<p> tag is created.
+            const pText = document.createTextNode("Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus officiis perferendis hic eaque sequi cupiditate quos dignissimos necessitatibus quasi, quae voluptatum optio enim explicabo ducimus, atque ad? Cumque, veritatis ratione.")
+            pTag.appendChild(pText)
+            div.appendChild(pTag)
+
+            const ulTag = document.createElement("ul")
+            const liTag1 = document.createElement("li")
+            const liTag2 = document.createElement("li")
+            const liTag3 = document.createElement("li")
+
+            const liText1 = document.createTextNode("one")
+            const liText2 = document.createTextNode("two")
+            const liText3 = document.createTextNode("three")
+
+            liTag1.appendChild(liText1)
+            liTag2.appendChild(liText2)
+            liTag3.appendChild(liText3)
+            ulTag.appendChild(liTag1)
+            ulTag.appendChild(liTag2)
+            ulTag.appendChild(liTag3)
+            div.append(ulTag)
+
+
+        const arr=["Rohit","Pratham","Akshay","Harish","Pranay"]
+        const  ulTag1 = document.createElement("ul")
+        for(e of arr){
+           const liTag= document.createElement("li")
+           const liText=document.createTextNode(e)
+           liTag.appendChild(liText)
+           ulTag1.appendChild(liTag)
+           div.append(ulTag1)
+        }
+
+        const AnchorTAG= document.createElement("a")
+        AnchorTAG.href="http//www.google.com/"
+        const text=document.createTextNode("google Links")
+        AnchorTAG.append(text)
+        div.append(AnchorTAG)
+
+        const aULTag=document.createElement("ul")
+        for(e of arr){
+           const aTag=document.createElement("a")
+           aTag.href="file:///R:/cdac%20aug24/WPT/JQUERY/Dom-manipulation/example.html"
+           const aText=document.createTextNode(e)
+           const liTag=document.createElement("li")
+           aTag.appendChild(aText)
+           liTag.appendChild(aTag)
+           aULTag.append(liTag)
+           div.append(aULTag)
+        }
+
+        
+        const arrCity=["Nagpur","Wadsa", "Pune","Delhi"]
+        const urls=[`https://www.google.com/search?q=nagpur`,"https://www.google.com/search?q=wadsa","https://www.google.com/search?q=pune","https://www.google.com/search?q=Delhi"]    
+           const arrULTag=document.createElement("ul")
+        arrCity.forEach((e,i) =>{
+           const aTag=document.createElement("a")
+           aTag.href=urls[i]
+           const aText=document.createTextNode(e)
+           const liTag=document.createElement("li")
+           aTag.appendChild(aText)
+           liTag.appendChild(aTag)
+           arrULTag.append(liTag)
+           div.append(arrULTag)
+
+      })
+      const FruitsAndURLs=[
+            {Mango : "https://www.google.com/search?q=mango"},
+            {Apple : "https://www.google.com/search?q=apple"},
+            {Grapes : "https://www.google.com/search?q=grapes"},
+            {Orange : "https://www.google.com/search?q=Orange"}
+           ]
+           const FruitULTag=document.createElement("ul")
+        for(let obj of FruitsAndURLs){
+            for(let [k,v] of Object.entries(obj)){
+                const aTag=document.createElement("a")
+           aTag.href=v
+           const aText=document.createTextNode(k)
+           const liTag=document.createElement("li")
+           aTag.appendChild(aText)
+           liTag.appendChild(aTag)
+           FruitULTag.append(liTag)
+           div.append(FruitULTag)
+            }
+        }
+      const imgdiv=document.getElementById("img")
+        const imgTag=document.createElement("img")
+        imgTag.src="firework2.jpg"
+        imgdiv.append(imgTag)
+               
+    </script>
+</body>
+</html>

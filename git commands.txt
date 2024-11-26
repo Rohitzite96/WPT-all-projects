@@ -1,0 +1,90 @@
+git config --global user.name //to check the name 
+
+git config --global user.name "Rohit"
+
+git config --global user.email "rohitzite96@gmail.com
+
+git config --global user.email // to check the email 
+
+git status
+
+git add -A //-A means All the file should be tracked
+
+git rm -r --cached . // take files to untrack . means current folder
+
+git commit -m "master: initial first commit"
+=>
+commit 1f5273eae8231283c5c50de64e7162837429d37c(Commit Hashcode(id)) (HEAD -> master)
+Author: Rohit <rohitzite96@gmail.com>
+Date:   Mon Nov 25 11:23:49 2024 +0530
+
+git status 
+=>
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+git commit -m "master: second index.html alert change"
+=>
+[master 0a8a81c] master: second index.html alert change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS R:\cdac aug24\WPT\Git-Practice\project1>
+
+git log
+=>
+commit 0a8a81c0757a28593749c3ce8534f95a975881dd (HEAD -> master)
+commit 0a8a81c0757a28593749c3ce8534f95a975881dd (HEAD -> master)
+Author: Rohit <rohitzite96@gmail.com>
+Date:   Mon Nov 25 11:32:25 2024 +0530
+
+    master: second index.html alert change
+
+commit 1f5273eae8231283c5c50de64e7162837429d37c
+Author: Rohit <rohitzite96@gmail.com>
+Date:   Mon Nov 25 11:23:49 2024 +0530
+
+    master: initial first commit
+
+Press Q to quit from log
+
+
+git diff commit-1 commit-2 
+=>
+3749c3ce8534f95a975881dd
+diff --git a/index.html b/index.html
+index 145dd3c..d70b084 100644
+--- a/index.html
++++ b/index.html
+@@ -13,7 +13,7 @@
+         <div class="row">
+             <div class="col-12">
+                 <div class="alert alert-info text-center mb-0" role="alert">
+-                    There's newer version of bootstrap!
++                   Baburao Ganpathrao Aapte
+                   </div>
+             </div>
+         </div>
+
+git branch // check total branches
+=>
+* master //* current selected branch
+
+git branch dev1 
+=>
+to create new branch of name dev1
+
+git checkout branchName
+=>
+to switch branch 
+
+ git add .\login.html
+=>
+to  track file
+
+
+git merge dev1
+=>
+to merge the branches
+
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .bg-color{
+            background-color: aqua;
+            border:2px  solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        current elemenet's parent/child/siblings(next or prev)
+    </pre>
+    <div class="container">
+      <div class="alert alert-primary " id="alert1" role="alert">
+        A simple <span>primary</span> alert—check it out!
+        <p class="para1">
+          Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Suscipit
+          minima officiis corporis fugit ipsam exercitationem! Maxime cupiditate
+          eligendi voluptatibus quo, eveniet perspiciatis suscipit, aperiam
+          ipsum corrupti alias distinctio possimus autem.
+        </p>
+        <p id="para2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque impedit
+          nesciunt, fugit facere dignissimos reiciendis quia, quidem
+          necessitatibus dolores distinctio quasi qui nobis nam sed, obcaecati
+          doloremque voluptatibus totam id.
+        </p>
+      </div>
+      <div class="alert alert-primary " id="alert1" role="alert">
+        A simple <span>primary</span> alert—check it out!
+        <p class="para1">
+          Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Suscipit
+          minima officiis corporis fugit ipsam exercitationem! Maxime cupiditate
+          eligendi voluptatibus quo, eveniet perspiciatis suscipit, aperiam
+          ipsum corrupti alias distinctio possimus autem.
+        </p>
+        <p id="para2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque impedit
+          nesciunt, fugit facere dignissimos reiciendis quia, quidem
+          necessitatibus dolores distinctio quasi qui nobis nam sed, obcaecati
+          doloremque voluptatibus totam id.
+        </p>
+      </div>
+      <div class="alert alert-primary" id="alert1" role="alert">
+        A simple <span>primary</span> alert—check it out!
+        <p class="para1">
+          Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Suscipit
+          minima officiis corporis fugit ipsam exercitationem! Maxime cupiditate
+          eligendi voluptatibus quo, eveniet perspiciatis suscipit, aperiam
+          ipsum corrupti alias distinctio possimus autem.
+        </p>
+        <p id="para2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque impedit
+          nesciunt, fugit facere dignissimos reiciendis quia, quidem
+          necessitatibus dolores distinctio quasi qui nobis nam sed, obcaecati
+          doloremque voluptatibus totam id.
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous">
+    </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script>
+    const myfunction=()=>{
+        // $("#alert1").children().css({"color":"red"}) //it applies to all the children data of alert1 it is only done in jquery
+        // $("#para1").parent().addClass("bg-color") //bg-color class is created in style tag 
+        //remove.Class("classname")
+        //hasClass("classname")returns boolean
+        // console.log($("#para1").parents()) //for selecting all the parents
+        // console.log($("#para1").parentsUntil("body"))//for selecting the parents upto the given parameter.
+        // $(".para1").closest("div").css({"border":"2px solid pink"})
+        // $(".para1").next().css({"border":"2px solid orange"})
+        // $(".para1").nextAll().css({"border":"2px solid blue"})
+        // $(".para1").nextUntil("div").css({"border":"2px solid red"})
+
+        // $(".para1").prev().css({"border":"2px solid green"})
+        // $(".para1").prevAll().css({"border":"2px solid black"})
+        // $(".para1").prevUntil("div").css({"border":"2px solid purple"})
+
+        // FIND METHOD
+
+        $("body").find("b").addClass("bg-color")
+        $("body").first("").addClass("bg-color")
+        $("body").last()
+        $("body").eq()
+
+    }
+    $(document).ready(myfunction)
+  </script>
+</body>
+</html>

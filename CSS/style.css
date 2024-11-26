@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+/* (* all) Universal Selector */
+/* tag selector */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+div.container {
+width: 100vw; /*(viewport width) 100=> 100% complete  width of viewport*/
+
+height: 100vh; /*(viewport height) 100=> 100% compleate height of viewport*/
+
+ border: black 2px solid;
+/* border-color, border-width,border-style:"solid/dotted/dashed/inset/outset/double...." */
+}
+/* percent vs viewport*/
+header {
+height: 10vh;
+background-color: #35322d;
+}
+main {
+height: 70vh;
+display: flex;
+justify-content: center; /* horizontal center */
+align-items: center;/* vertical-center*/
+background-image: url("bgblackimage.jpeg");
+}
+footer {
+height: 20vh;
+background-color: #35322d;
+}
+
+.top-heading {
+color: rgb(14, 34, 63);
+}
+
+.top-para {
+color: rgb(3, 21, 10);
+background-color: white;
+padding: 10px;
+margin: 10px;
+box-shadow: 3px 3px  6px red;
+font-family: "Playwrite GB S", cursive;
+font-optical-sizing: auto;
+font-weight: 700;
+font-style: normal;
+}
+
+.kablammo-heading
+{
+font-family: "Kablammo", system-ui;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:
+"MORF" 0;
+}
+
+.heading {
+color: rgb(88, 9, 99);
+}
+.para {
+color: white;
+background-color: black;
+padding: 10px;
+margin: 10px;
+box-shadow: 3px 3px  6px red;
+
+
+}
+.main-content
+{
+background-color: rgb(78, 76, 76);
+height:80%;
+width:80%;
+box-shadow:3px 3px 5px black;
+/* box-shadow:3px 3px 5px black,-3px -3px 5px blue,10px 10px 10px black ; example only */
+/* +hs(right) +vs(bottom) blur color */
+/* +hs(left) +vs(top) blur color */
+
+padding:40px  30px 43px;
+/* 10px is for top and bottom (10px,20px )*/
+/* 20px is for right and left (10px,20px )*/
+/*40px is for top 30px is for leftright and 20px is for bottom (40px  30px 20px);*/
+
+border-radius: 10%;
+font-family: sans-serif;
+}
+
+.main-content h1/*descendent selector*/
+{
+color: white;
+}
+
+header:hover
+{
+background-color:#605c54 ;
+}
+
+
